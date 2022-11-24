@@ -4,43 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a86f0bf4-203b-499e-8ff4-866bd4cf1087" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/config/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/config/Convertable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/config/DTOConvertor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/controller/DeliveryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/controller/WarehouseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/dto/InvoiceDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/dto/OrderDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/dto/WarehouseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/entity/Invoice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/entity/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/entity/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/entity/OrderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/entity/Warehouse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/entity/WarehouseItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/enums/OrderStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/init/Initialization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/repository/DeliveryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/repository/ItemRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/repository/OrderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/repository/WarehouseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/DeliveryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/WarehouseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/DeliveryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/WarehouseServiceImpl.java" afterDir="false" />
+    <list default="true" id="a86f0bf4-203b-499e-8ff4-866bd4cf1087" name="Changes" comment="Done">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/controller/ItemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/dto/ItemDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/ItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/ItemServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/controller/DeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/controller/DeliveryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/entity/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/repository/WarehouseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/repository/WarehouseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/DeliveryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/DeliveryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/WarehouseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/WarehouseServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,8 +100,18 @@
       <updated>1669061863946</updated>
       <workItem from="1669061865494" duration="5052000" />
       <workItem from="1669143150421" duration="9006000" />
-      <workItem from="1669229332977" duration="2074000" />
+      <workItem from="1669229332977" duration="2441000" />
+      <workItem from="1669284703777" duration="3952000" />
+      <workItem from="1669294203301" duration="1198000" />
     </task>
+    <task id="LOCAL-00001" summary="Done">
+      <created>1669231722834</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669231722834</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,5 +127,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done" />
   </component>
 </project>

@@ -8,7 +8,6 @@ import java.util.Map;
 import java.util.TreeMap;
 
 @Repository
-@ToString
 public class WarehouseRepository {
     private final Map<Long, Warehouse> warehouseRepository = new TreeMap<>();
     private static Long freeId = 0L;

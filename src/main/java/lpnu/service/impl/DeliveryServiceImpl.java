@@ -26,7 +26,7 @@ public class DeliveryServiceImpl implements DeliveryService {
         this.orderRepository = orderRepository;
     }
 
-    public static InvoiceDTO toDTO(final Invoice invoice){
+    public static InvoiceDTO toDTO(final Invoice invoice) {
         return DTOConvertor.convertToDto(invoice, InvoiceDTO.class);
     }
 
@@ -39,18 +39,28 @@ public class DeliveryServiceImpl implements DeliveryService {
     @Override
     public OrderDTO createDelivery(final Long orderId) {
         final Order order = orderRepository.getOrderById(orderId);
-        order.setOrderStatus(OrderStatus.AWAITING_ON_DELIVERY);
-        // ... відправлення до відділу доставки (служба складу)
-        return OrderServiceImpl.toDTO(orderRepository.updateOrder(order));
+        if(order.getOrderStatus() == OrderStatus.PACKED) {
+            order.setOrderStatus(OrderStatus.AWAITING_ON_DELIVERY);
+            // ... відправлення до відділу доставки (служба складу)
+            return OrderServiceImpl.toDTO(orderRepository.updateOrder(order));
+        } else {
+            // Якщо статус інший, то створити доставку не можна
+            throw new RuntimeException();
+        }
     }
 
     @Override
     public InvoiceDTO sendOrder(final Long orderId) {
         final Order order = orderRepository.getOrderById(orderId);
-        // ... відправлення доставки
-        order.setOrderStatus(OrderStatus.SENT);
-        return createInvoice(order);
+        if (order.getOrderStatus() == OrderStatus.AWAITING_ON_DELIVERY) {
+            // ... відправлення доставки
+            order.setOrderStatus(OrderStatus.SENT);
+            return createInvoice(order);
+        } else {
+            throw new RuntimeException();
+        }
     }
+
 
     @Override
     public InvoiceDTO getInvoiceById(final Long invoiceId) {

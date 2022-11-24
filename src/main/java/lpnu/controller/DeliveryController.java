@@ -1,7 +1,6 @@
 package lpnu.controller;
 
 import lpnu.dto.InvoiceDTO;
-import lpnu.entity.Invoice;
 import lpnu.service.DeliveryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -26,7 +26,7 @@ public class OrderServiceImpl implements OrderService {
         this.orderRepository = orderRepository;
     }
 
-    public static OrderDTO toDTO(final Order order){
+    public static OrderDTO toDTO(final Order order) {
         return DTOConvertor.convertToDto(order, OrderDTO.class);
     }
 
@@ -50,10 +50,12 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public OrderDTO payOrder(final Long orderId, final Double sum) {
         final Order order = orderRepository.getOrderById(orderId);
-        if (Objects.equals(order.getOrderPrice(), sum)) {
+        if (order.getOrderStatus() == CREATED && Objects.equals(order.getOrderPrice(), sum)) {
             order.setOrderStatus(PAID);
+            return toDTO(orderRepository.updateOrder(order));
+        } else {
+            throw new RuntimeException();
         }
-        return toDTO(orderRepository.updateOrder(order));
     }
 
     @Override
@@ -62,7 +64,7 @@ public class OrderServiceImpl implements OrderService {
         if (order.getOrderStatus() == CREATED) {
             return toDTO(orderRepository.removeOrderById(orderId));
         } else {
-            // Якщо статус інший, то це потрібно робити через контрол складу
+            // Якщо статус інший, то це потрібно робити через контролер складу
             throw new RuntimeException();
         }
     }
@@ -70,14 +72,24 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public OrderDTO cancelOrder(final Long orderId) {
         final Order order = orderRepository.getOrderById(orderId);
-        order.setOrderStatus(CANCELLED);
-        return toDTO(orderRepository.updateOrder(order));
+        if(order.getOrderStatus() == CREATED) {
+            order.setOrderStatus(CANCELLED);
+            return toDTO(orderRepository.updateOrder(order));
+        } else {
+            // Якщо статус інший, то це потрібно робити через контролер складу
+            throw new RuntimeException();
+        }
     }
 
     @Override
     public OrderDTO approveOrderReceiving(Long orderId) {
         final Order order = orderRepository.getOrderById(orderId);
-        order.setOrderStatus(RECEIVED);
-        return toDTO(orderRepository.updateOrder(order));
+        if (order.getOrderStatus() == SENT) {
+            order.setOrderStatus(RECEIVED);
+            return toDTO(orderRepository.updateOrder(order));
+        } else {
+            // Якщо статус інший, то підтвердити отримання замовлення не можна
+            throw new RuntimeException();
+        }
     }
 }

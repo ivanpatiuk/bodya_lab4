@@ -6,7 +6,7 @@ import lpnu.entity.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@RequestMapping("/api/v1/customer/")
+@RequestMapping("/api/v1/order/")
 @RestController
 public class OrderController {
 
