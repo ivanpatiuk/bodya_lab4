@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a86f0bf4-203b-499e-8ff4-866bd4cf1087" name="Changes" comment="Done">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/controller/ItemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/dto/ItemDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/ItemService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/ItemServiceImpl.java" afterDir="false" />
+    <list default="true" id="a86f0bf4-203b-499e-8ff4-866bd4cf1087" name="Changes" comment="v1.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/controller/DeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/controller/DeliveryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/entity/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/repository/WarehouseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/repository/WarehouseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/DeliveryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/DeliveryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/WarehouseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/WarehouseServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +91,9 @@
       <workItem from="1669143150421" duration="9006000" />
       <workItem from="1669229332977" duration="2441000" />
       <workItem from="1669284703777" duration="3952000" />
-      <workItem from="1669294203301" duration="1198000" />
+      <workItem from="1669294203301" duration="6027000" />
+      <workItem from="1669314382112" duration="60000" />
+      <workItem from="1669328150640" duration="444000" />
     </task>
     <task id="LOCAL-00001" summary="Done">
       <created>1669231722834</created>
@@ -111,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669231722834</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="v1.1">
+      <created>1669295457710</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669295457710</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +128,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done" />
+    <MESSAGE value="v1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/lpnu/service/impl/WarehouseServiceImpl.java</url>
+          <line>33</line>
+          <properties class="lpnu.service.impl.WarehouseServiceImpl" method="getWarehouseById">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

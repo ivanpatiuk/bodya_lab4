@@ -32,19 +32,25 @@ public class WarehouseServiceImpl implements WarehouseService {
 
     @Override
     public WarehouseDTO getWarehouseById(final Long warehouseId) {
-        System.out.println(1);
-        WarehouseDTO vs =  DTOConvertor.convertToDto(warehouseRepository.getWarehouseById(warehouseId), WarehouseDTO.class);
-        System.out.println(vs);
-        return vs;
+        return DTOConvertor.convertToDto(warehouseRepository.getWarehouseById(warehouseId), WarehouseDTO.class);
     }
 
     @Override
     public Double getOrderPrice(final Order order) {
         final Warehouse warehouse = warehouseRepository.getWarehouseById(order.getWarehouseId());
         Double orderPrice = 0.0;
-        System.out.println(order);
         for (OrderItem orderItem : order.getOrderItems()) {
             final Item item = itemRepository.getItemById(orderItem.getItemId());
+            // Якщо на складі недостатньо товару, викинути ексепшн
+            if(orderItem.getQuantity() > warehouseRepository
+                    .getWarehouseById(order
+                            .getWarehouseId())
+                    .getStorage()
+                    .get(item
+                            .getItemId())
+                    .getQuantity()){
+                throw new RuntimeException();
+            }
             orderPrice += warehouse.getStorage().get(item.getItemId()).getPricePerOne();
         }
         if (orderPrice == 0.0) {
