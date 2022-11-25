@@ -13,6 +13,8 @@ import lpnu.service.WarehouseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Map;
+
 @Service
 public class WarehouseServiceImpl implements WarehouseService {
 
@@ -39,19 +41,22 @@ public class WarehouseServiceImpl implements WarehouseService {
     public Double getOrderPrice(final Order order) {
         final Warehouse warehouse = warehouseRepository.getWarehouseById(order.getWarehouseId());
         Double orderPrice = 0.0;
-        for (OrderItem orderItem : order.getOrderItems()) {
-            final Item item = itemRepository.getItemById(orderItem.getItemId());
-            // Якщо на складі недостатньо товару, викинути ексепшн
-            if(orderItem.getQuantity() > warehouseRepository
-                    .getWarehouseById(order
-                            .getWarehouseId())
+        // Перевірка, чи на складі достатньо товару
+        for(OrderItem orderItem : order.getOrderItems()){
+            if(orderItem.getQuantity() > warehouse
                     .getStorage()
-                    .get(item
-                            .getItemId())
+                    .get(itemRepository.getItemById(orderItem.getItemId()).getItemId())
                     .getQuantity()){
                 throw new RuntimeException();
             }
+        }
+        for (OrderItem orderItem : order.getOrderItems()) {
+            final Item item = itemRepository.getItemById(orderItem.getItemId());
+            final Long itemId = item.getItemId();
+            final Integer oldQuantity = warehouse.getStorage().get(itemId).getQuantity();
+            warehouse.getStorage().get(itemId).setQuantity(oldQuantity-orderItem.getQuantity());
             orderPrice += warehouse.getStorage().get(item.getItemId()).getPricePerOne();
+            warehouseRepository.updateWarehouse(warehouse);
         }
         if (orderPrice == 0.0) {
             throw new RuntimeException();

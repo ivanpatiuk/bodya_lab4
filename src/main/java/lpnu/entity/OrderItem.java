@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @Data
 public class OrderItem {
     private Long itemId;
-    private Long quantity;
+    private Integer quantity;
 }

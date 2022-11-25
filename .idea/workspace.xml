@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a86f0bf4-203b-499e-8ff4-866bd4cf1087" name="Changes" comment="v1.1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a86f0bf4-203b-499e-8ff4-866bd4cf1087" name="Changes" comment="v1.2">
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/entity/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/entity/OrderItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/WarehouseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/WarehouseServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,6 +94,7 @@
       <workItem from="1669294203301" duration="6027000" />
       <workItem from="1669314382112" duration="60000" />
       <workItem from="1669328150640" duration="444000" />
+      <workItem from="1669370907851" duration="673000" />
     </task>
     <task id="LOCAL-00001" summary="Done">
       <created>1669231722834</created>
@@ -109,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669295457710</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="v1.2">
+      <created>1669371174998</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669371174998</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,14 +137,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Done" />
     <MESSAGE value="v1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.1" />
+    <MESSAGE value="v1.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/lpnu/service/impl/WarehouseServiceImpl.java</url>
-          <line>33</line>
+          <line>35</line>
           <properties class="lpnu.service.impl.WarehouseServiceImpl" method="getWarehouseById">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
